@@ -50,7 +50,7 @@ const BoxWidth = () => {
     <>
       <div className="flex items-center justify-center w-full min-h-screen py-20">
         <div className="xl:max-w-[1140px] 2xl:max-w-[1320px] mx-auto px-3 md:px-5 xl:px-0">
-          <div className="md:hidden">
+          <div className="lg:hidden flex items-center md:items-start justify-center flex-wrap gap-5">
             {[0, 1, 2, 3].map((index) => (
               <div
                 key={index}
@@ -59,9 +59,9 @@ const BoxWidth = () => {
                   transition: "height 0.3s ease-in-out",
                   height: calculateHeight(index),
                 }}
-                className="cursor-pointer rounded-lg mb-4 overflow-hidden"
+                className="cursor-pointer rounded-lg overflow-hidden"
               >
-                <div className="bg-[blue] text-white max-w-[500px] mx-auto p-2 rounded-lg h-full">
+                <div className="bg-[blue] text-white max-w-[500px] md:max-w-[350px] mx-auto p-2 rounded-lg h-full">
                   <Image
                     className="h-full max-h-[300px] w-full object-cover"
                     src={girlImg}
@@ -92,7 +92,7 @@ const BoxWidth = () => {
               </div>
             ))}
           </div>
-          <div className="hidden md:flex flex-wrap lg:flex-nowrap items-center justify-start lg:justify-between gap-4">
+          <div className="hidden lg:flex flex-wrap lg:flex-nowrap items-center justify-start lg:justify-between gap-4">
             {[0, 1, 2, 3].map((index) => (
               <div
                 key={index}

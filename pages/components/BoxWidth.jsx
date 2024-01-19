@@ -29,6 +29,12 @@ const BoxWidth = () => {
       } else {
         return "60%";
       }
+    } else if (windowSize < 1200) {
+      if (activeImg === null || activeImg === index) {
+        return "100%";
+      } else {
+        return "20%";
+      }
     } else if (activeImg === null || activeImg === index) {
       return "40%";
     } else {

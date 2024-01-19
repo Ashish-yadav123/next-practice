@@ -4,30 +4,17 @@ import girlImg from "../../public/assets/webp/girl_img.webp";
 
 const BoxWidth = () => {
   const [activeImg, setActiveImg] = useState(0);
-  const [windowWidth, setWindowWidth] = useState(0);
-  const [windowHeight, setWindowHeight] = useState(0);
+  const [windowSize, setWindowSize] = useState(0);
 
-  // HANDLE RESIZE WIDTH
+  // HANDLE RESIZE
   useEffect(() => {
     const handleResize = () => {
-      setWindowWidth(window.innerWidth);
+      setWindowSize(window.innerWidth);
     };
-    setWindowWidth(window.innerWidth);
+    setWindowSize(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  // HANDLE RESIZE HEIGHT
-  useEffect(() => {
-    const handleResizeHeight = () => {
-      setWindowHeight(window.innerHeight);
-    };
-    setWindowHeight(window.innerHeight);
-    window.addEventListener("resize", handleResizeHeight);
-    return () => {
-      window.removeEventListener("resize", handleResizeHeight);
     };
   }, []);
 
@@ -36,7 +23,7 @@ const BoxWidth = () => {
   };
 
   const calculateWidth = (index) => {
-    if (windowWidth < 1024) {
+    if (windowSize < 1024) {
       if (activeImg === null || activeImg === index) {
         return "100%";
       } else {
@@ -50,7 +37,7 @@ const BoxWidth = () => {
   };
 
   const calculateHeight = (index) => {
-    if (windowHeight < 1024) {
+    if (windowSize < 1024) {
       if (activeImg === null || activeImg === index) {
         return "650px";
       } else {

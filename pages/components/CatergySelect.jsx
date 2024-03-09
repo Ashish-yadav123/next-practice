@@ -27,9 +27,10 @@ const CategorySelect = () => {
 
   const handleSizeClick = (size) => {
     setSelectedSizes((prevSizes) => {
-      // Check if the size is already selected, if yes, remove it
+      // Check if the size is already selected
       if (prevSizes.includes(size)) {
-        return prevSizes.filter((selectedSize) => selectedSize !== size);
+        // If already selected, return the previous sizes without removing it
+        return prevSizes;
       } else {
         // If not selected, add it to the selected sizes
         return [...prevSizes, size];

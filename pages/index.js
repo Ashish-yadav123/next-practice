@@ -1,13 +1,14 @@
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import BoxWidth from "./components/BoxWidth";
-
-const inter = Inter({ subsets: ["latin"] });
+import Filterjs from "./components/Filterjs";
+import CatergySelect from "./components/CatergySelect";
 
 export default function Home() {
   return (
     <>
-      <BoxWidth />
+      {/* <BoxWidth /> */}
+      {/* <Filterjs /> */}
+      <CatergySelect />
     </>
   );
 }
